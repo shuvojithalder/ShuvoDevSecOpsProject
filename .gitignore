@@ -1,0 +1,60 @@
+## Build artifacts
+bin/
+obj/
+out/
+artifacts/
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.userprefs
+
+## IDE settings
+.vs/
+.vscode/
+
+## Logs
+*.log
+logs/
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+nuget.exe
+
+## Dotnet tools
+.dotnet-tools/
+
+## Coverage / test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+*.trx
+
+## Docker
+**/.dockerignore
+**/Dockerfile.*.backup
+
+## OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## Node / frontend (if added later)
+node_modules/
+dist/
+build/
+
+## Secrets (never commit real secrets)
+*.secret.*
+*.secrets.*
+*.key
+*.pfx
+.env
+.env.*
+
