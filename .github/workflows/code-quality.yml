@@ -19,12 +19,12 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
 
-      - name: Run code analysis
-        run: dotnet analyze
+      - name: Build (with analyzers)
+        run: dotnet build -c Release --no-restore
 
       - name: Run code formatting
-        run: dotnet format
+        run: dotnet format --verify-no-changes --no-restore
 
       - name: Run code security
-        run: dotnet security
+        run: dotnet list package --vulnerable --include-transitive
 
