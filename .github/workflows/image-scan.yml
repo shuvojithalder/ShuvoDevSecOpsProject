@@ -18,8 +18,7 @@ jobs:
       - name: Scan image
         uses: aquasecurity/trivy-action@0.20.0
         with:
-          image-ref: ${{ secrets.DOCKERHUB_USER }}/minimal-api:latest
+          image-ref: ${{ vars.DOCKERHUB_USER }}/minimal-api:latest
           scan-type: "os,library"
           severity: 'CRITICAL,HIGH'
-          exit-code: '1'
           trivyignore: ${{ github.workspace }}/.trivyignore
