@@ -1,7 +1,6 @@
 name: Code Quality
 on:
   workflow_call:
-
 jobs:
   validate-code:
     runs-on: ubuntu-latest
