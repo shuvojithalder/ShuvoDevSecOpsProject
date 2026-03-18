@@ -20,4 +20,4 @@ jobs:
         with:
           context: .
           file: MinimalApi/Dockerfile
-          tags: ${{ vars.DOCKER_USERNAME }}/minimal-api:latest
+          tags: ${{ vars.DOCKERHUB_USER }}/minimal-api:latest
