@@ -4,29 +4,29 @@ on:
 
 jobs:
   validate-code:
-  runs-on: ubuntu-latest
-  strategy:
-    matrix:
-      fail-fast: false
-      dotnet-version: [ '7.0', '8.0', '9.0' ]
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        fail-fast: false
+        dotnet-version: [ '7.0', '8.0', '9.0' ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Set up .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
 
-    - name: Install dependencies
-      run: dotnet restore
+      - name: Install dependencies
+        run: dotnet restore
 
-    - name: Run code analysis
-      run: dotnet analyze
+      - name: Run code analysis
+        run: dotnet analyze
 
-    - name: Run code formatting
-      run: dotnet format
+      - name: Run code formatting
+        run: dotnet format
 
-    - name: Run code security
-      run: dotnet security
+      - name: Run code security
+        run: dotnet security
 
