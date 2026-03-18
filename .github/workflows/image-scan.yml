@@ -16,7 +16,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Scan image
-        uses: aquasecurity/trivy-action@v1.1.0
+        uses: aquasecurity/trivy-action@v0.34.0
         with:
           image-ref: ${{ secrets.DOCKER_USERNAME }}/minimal-api:latest
           scan-type: "os,library"
