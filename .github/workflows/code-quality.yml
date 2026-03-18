@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        fail-fast: true
         dotnet-version: [ '9.0' ]
     steps:
       - name: Checkout
