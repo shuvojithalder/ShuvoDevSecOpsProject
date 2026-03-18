@@ -2,7 +2,7 @@ name: DevSecOps End To End Pipeline
 
 on: 
     push:
-        branches: [main]
+        branches: [master]
 
 jobs:
     # CI (Continous Integration with Security Scanning)
