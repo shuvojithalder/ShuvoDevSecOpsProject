@@ -16,9 +16,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Scan image
-        uses: aquasecurity/trivy-action@v0.34.0
+        uses: aquasecurity/trivy-action@0.20.0
         with:
-          image-ref: ${{ secrets.DOCKER_USERNAME }}/minimal-api:latest
+          image-ref: ${{ secrets.DOCKERHUB_USER }}/minimal-api:latest
           scan-type: "os,library"
           severity: 'CRITICAL,HIGH'
           exit-code: '1'
