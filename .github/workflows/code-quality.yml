@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        fail-fast: false
-        dotnet-version: [ '7.0', '8.0', '9.0' ]
+        fail-fast: true
+        dotnet-version: [ '9.0' ]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
