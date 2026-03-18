@@ -20,4 +20,5 @@ jobs:
         with:
           context: .
           file: MinimalApi/Dockerfile
+          push: true
           tags: ${{ vars.DOCKERHUB_USER }}/minimal-api:latest
